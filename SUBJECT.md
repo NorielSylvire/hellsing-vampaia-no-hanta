@@ -158,5 +158,26 @@ A parte de los vampiros y asesinos, hay otros objetos de juego que tienen una vi
 `Trap`: una trampa de pinchos que hace 2 de daño una vez, cuesta 10 y tras hacer daño a un vampiro una vez se destruye.
 
 
+
+
 **Paquete `control` **
 
+Contiene la clase abstracta `Command`.
+La clase abstracta tendrá definidos los atributos estáticos finales `name`, `alias`, `description` y `syntax`, y el método estático `execute`.
+
+El nombre del comando será el nombre completo que deberá usarse para ejecutar dicho comando. Por ejemplo, el comando help tiene como nombre "help".
+
+En el caso del comando help, su alias será "h", es decir, su inicial. Es decir, el alias podrá usarse para ejecutar ese mismo comando sin tener porque poner su nombre completo.
+
+En la descripción deberás explicar lo que hace el comando, en el caso de help sería algo como "Shows the specified command's description and syntax."
+
+Y en el syntax de help deberías poner un ejemplo general de cómo se usa el comando, por ejemplo: "[h]elp <commandName>". Entre corchetes está el alias y entre <> están los parámetros.
+
+Las clases de heredan de `Command` serán:
+
+`HelpCommand`: su nombre es help y su alias es h. Este comando se usa para mostrar la descripción y la sintaxis de el comando que pongas como parámetro. Por ejemplo "help exit" mostrará la descripción y la sintaxis del comando exit.
+**Importante** si se escribe únicamente help o h, se deberá mostrar la sintaxis de todos los comandos (vale hardcodear esto).
+
+`ExitCommand`: su nombre es exit y su alias es e. Este comando manda una señal para terminar la partida actual. Después de ejecutarse este comando, es decir al salir del bucle de juego, se deberá mostrar un texto con el estado del mapa al final, el número de turnos que han pasado, y el dinero que el jugador tiene.
+
+`BuyCommand`: su nombre es buy, y su alias es b. Su sintaxis es "[b]uy <item> <posX> <posY>". Sirve para comprar una torre o un muro o lo que sea y si el jugador tiene dinero suficiente, ponerla en la posición posX,posY.

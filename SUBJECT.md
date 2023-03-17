@@ -22,7 +22,7 @@ Ejemplos de camelCase:
 
 (Camel case es la primera letra en minúscula, y todas las iniciales del resto de palabras en mayúsculas, sin espacios ni barrabajas)
 
-Los nombres de paquetes, clases, tipos e interfaces deberán estar escritos en **PascalCase**.
+Los nombres de clases, tipos e interfaces deberán estar escritos en **PascalCase**.
 Ejemplos de PascalCase:
 
 `SoyPascalCase`
@@ -34,6 +34,8 @@ Ejemplos de PascalCase:
 `ni_yo_tampoco`
 
 (Pascal Case es igual que Camel Case pero con la primera inicial en mayúsculas también)
+
+Los nombres de paquetes deberán estar completamente en minúsculas.
 
 El resto de nombres y cuestiones de estilo son libres
 
@@ -66,4 +68,13 @@ Si se ha clonado correctamente puedes empezar a programar.
 Mi consejo es que primero crees un archivo llamado README.md y le escribas algo random, como "test" o lo que tú quieras, y que luego para comprobar si funciona, añadas ese archivo README.md a tu repositorio, hagas commit y luego hagas push.
 
 Si no hay ningún error es que todo está perfectamente funcional y que puedes ponerte a programar. Si te da errores dímelo por WhatsApp y hablamos.
+
+
+## Paquetes y Clases
+
+Dentro de intellij, el proyecto deberá llamarse hellsingvh.
+
+Si tienes una página web personal, como por ejemplo norielsylvire.itch.io, entonces el código de tu proyecto deberá estar dentro de la carpeta src, y dentro de esta carpeta crearás el paquete principal io.itch.norielsylvire.hellsingvh
+
+Dentro de ese paquete crearás todos los demás paquetes y clases.
 
